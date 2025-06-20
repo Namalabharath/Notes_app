@@ -3,7 +3,7 @@ const cors = require("cors");
 const express = require("express");
 const connectDB = require("./connectDB");
 const Notes = require("./models/Notes");
-
+require('./reminderJob');
 const app = express();
 const PORT = process.env.PORT||8000;
 
@@ -11,6 +11,13 @@ connectDB();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// ...existing code...
+const remindersRouter = require('./routes/reminders');
+app.use('/reminders', remindersRouter);
+// ...existing code...
+
+
+
 
 // Get All Notes
 app.get("/api/notes", async (req, res) => {

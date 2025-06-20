@@ -8,7 +8,11 @@ const NoteSchema = new Schema({
   },
   description: {
     type: String
-  }
+  },
+  reminderDateTime: Date,
+  reminderEmail: String,
+  reminderMessage: String,
+  reminderSent: { type: Boolean, default: false }
 });
 
 module.exports = mongoose.model('Note', NoteSchema);

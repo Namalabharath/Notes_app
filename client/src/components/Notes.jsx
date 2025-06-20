@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import './Notes.css'
 function Notes() {
   const baseUrl = `${import.meta.env.VITE_SERVER_URL}/api/notes`;
   const [data, setData] = useState([]);
@@ -37,29 +37,27 @@ function Notes() {
       ) : error ? (
         <p>{error}</p>
       ) : (
-        <ul className="notes">
-
-          <li className="add-note-button">
-            <Link to={`/add-note`}>+
-            <br />
-            add your note </Link>
-          </li>
-
-
-          {data.map((item) => (
-            <li key={item._id}>
-              <Link to={`/note/${item._id}`}>
-                <h3>{item.title}</h3>
-
-                <p>
-                  {item.description.length > 50
-                    ? `${item.description.substring(0, 50)}...`
-                    : item.description}
-                </p>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        
+        <ul className="notes-grid">
+  <li className="add-note-card">
+    <Link to={`/add-note`}>
+      <span className="plus-icon">+</span>
+      <span>Add your note</span>
+    </Link>
+  </li>
+  {data.map((item) => (
+    <li className="note-card" key={item._id}>
+      <Link to={`/note/${item._id}`}>
+        <h3>{item.title}</h3>
+        <p>
+          {item.description.length > 50
+            ? `${item.description.substring(0, 50)}...`
+            : item.description}
+        </p>
+      </Link>
+    </li>
+  ))}
+</ul>
       )}
     </div>
   );
