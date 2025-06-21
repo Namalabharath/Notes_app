@@ -1,4 +1,4 @@
-/* :root {
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -221,9 +221,9 @@ ul.notes p {
   display: block;
   margin-top: 2rem;
   margin-bottom: 2rem;
-} */
+}
 
-
+/* 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -250,7 +250,7 @@ ul.notes p {
 }
 
 
-/* Inputs */
+
 input, textarea, select {
   width: 100%;
   height: 30px;
@@ -336,7 +336,7 @@ footer {
   gap: 0.6rem;
 }
 
-/* Books */
+
 ul.notes {
   display: flex;
   list-style: none;
@@ -447,4 +447,4 @@ ul.notes p {
   display: block;
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
+} */
