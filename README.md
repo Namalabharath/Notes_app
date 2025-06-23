@@ -1,1 +1,1 @@
-Notes_app is  CRUD MERN application, covering both the Back-End and the Front-End. On the Back-End, Developed 5 API endpoints for data retrieval, specific record queries, record updates, and deletions. The Front-End will focus on displaying data, adding new records, and updating existing ones
+
