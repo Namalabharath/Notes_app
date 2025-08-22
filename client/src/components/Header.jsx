@@ -11,6 +11,7 @@ function Header() {
 
       <nav>
         <NavLink to="/">NOTES</NavLink>
+         <NavLink to="/ai-generate">🤖 AI GENERATOR</NavLink>
         <NavLink to="/about">REMINDERS</NavLink>
       </nav>
     </header>
