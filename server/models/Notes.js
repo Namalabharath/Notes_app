@@ -8,6 +8,15 @@ const NoteSchema = new Schema({
   },
   description: {
     type: String
+  },
+  isAIGenerated:{
+   type:Boolean,
+   default:false
+  },
+  aiMetadata:{
+    originalTopic:String,
+    noteType:String,
+    generatedAt:Date
   }
 });
 
